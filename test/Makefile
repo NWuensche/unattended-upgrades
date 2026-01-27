@@ -7,8 +7,8 @@ test-packages:
 
 check: test-packages
 	#PYTHONPATH=.. python3 -m unittest
-	PYTHONPATH=.. coverage run -a -m pytest
-	PYTHONPATH=.. coverage report unattended_upgrade.py
+	PYTHONPATH=.. python3 -m coverage run -a -m pytest
+	PYTHONPATH=.. python3 -m coverage report unattended_upgrade.py
 
 clean:
 	$(MAKE) -C packages clean
